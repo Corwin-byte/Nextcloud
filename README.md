@@ -1,3 +1,4 @@
-# pterodactyl-nginx
+# NextCloud For Pterodactyl
 
-self explanatory
+NextCloud for pterodactyl is a installer for pterodactyl running on Nginx!
+
