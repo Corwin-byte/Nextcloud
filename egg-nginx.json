@@ -10,7 +10,7 @@
     "description": "NextCloud config for pterodactyl",
     "features": null,
     "docker_images": {
-        "registry.gitlab.com\/corwindev\/nextcloud": "registry.gitlab.com\/corwindev\/nextcloud"
+        "registry.gitlab.com\/corwindev\/nextcloud": "ghcr.io\/corwindev\/nextcloud"
     },
     "file_denylist": [],
     "startup": "{{STARTUP_CMD}}",
@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n\r\ncd \/mnt\/server\r\n\r\napk --update add git\r\n\r\ngit clone https:\/\/gitlab.com\/CorwinDev\/NextCloud .\/temp\r\n\r\ncp -r .\/temp\/nginx \/mnt\/server\/\r\ncp -r .\/temp\/php-fpm \/mnt\/server\/\r\ncp -r .\/temp\/webroot \/mnt\/server\/\r\ncp .\/temp\/start.sh \/mnt\/server\/\r\n\r\nchmod +x \/mnt\/server\/start.sh\r\n\r\nrm -rf .\/temp",
+            "script": "#!\/bin\/ash\r\n\r\ncd \/mnt\/server\r\n\r\napk --update add git\r\n\r\ngit clone https:\/\/github.com\/CorwinDev\/NextCloud .\/temp\r\n\r\ncp -r .\/temp\/nginx \/mnt\/server\/\r\ncp -r .\/temp\/php-fpm \/mnt\/server\/\r\ncp -r .\/temp\/webroot \/mnt\/server\/\r\ncp .\/temp\/start.sh \/mnt\/server\/\r\n\r\nchmod +x \/mnt\/server\/start.sh\r\n\r\nrm -rf .\/temp",
             "container": "alpine:latest",
             "entrypoint": "ash"
         }
