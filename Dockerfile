@@ -34,14 +34,10 @@ RUN apk add --update-cache \
     php-pdo \
     php-mysqli \
     php-json \
-    php-pdo_mysql\
     php-pdo_sqlite\
     php-sqlite3 \
-    # mysql 
-    mysql-client \
-    mysql-server \
     # sqlite
-    sqlite3 
+    sqlite 
 USER container
 ENV  USER container
 ENV HOME /home/container
