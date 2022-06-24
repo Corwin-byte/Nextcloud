@@ -1,7 +1,7 @@
 #!/bin/ash
-
+rm /home/container/logs/apache.pid
 echo "Starting PHP-FPM..."
-/usr/sbin/php-fpm7 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
+/usr/sbin/php-fpm8 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
 
-echo "Starting Nginx..."
-/usr/sbin/nginx -c /home/container/nginx/nginx.conf
+echo "Starting Apache..."
+/usr/sbin/httpd -d /home/container/webroot/ -f /home/container/apache/apache.conf
